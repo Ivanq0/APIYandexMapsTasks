@@ -115,8 +115,7 @@ class Example(QWidget, Ui_MapWindow):
         if event.key() == Qt.Key_Down:
             if (float(self.lat) - 0.0255 * self.step_vert) >= -90:
                 self.lat = str(float(self.lat) - 0.0111 * self.step_vert)
-        self.pixmap = QPixmap(self.draw_map())
-        self.map_label.setPixmap(self.pixmap)
+        self.refresh_map()
 
     def refresh_map(self):
         self.pixmap = QPixmap(self.draw_map())
