@@ -55,6 +55,7 @@ class Ui_MapWindow(object):
 
         self.post_checkbox = QCheckBox(self)
         self.post_checkbox.move(5, 600)
+        self.post_checkbox.setFocusPolicy(QtCore.Qt.NoFocus)
 
         self.postindex_label = QLabel(self)
         self.postindex_label.move(25, 600)
